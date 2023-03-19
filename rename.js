@@ -16,7 +16,6 @@ const filterRegex = '/套餐|感谢|剩余/';
 function filter(proxies, targetPlatform) {
   return proxies.map( proxy => {
     // Return true if the current proxy is selected
-    
     if (filterRegex.test(proxy.name)) {
       return false;
     }
