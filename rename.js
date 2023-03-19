@@ -11,7 +11,7 @@ function operator(proxies, targetPlatform) {
   });
 }
 
-const filterRegex = '/套餐|感谢|剩余/';
+const filterRegex = /套餐|感谢|剩余/;
 
 function filter(proxies, targetPlatform) {
   return proxies.map( proxy => {
