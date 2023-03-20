@@ -4,7 +4,10 @@ const airport = ($arguments.airport == undefined) ? '' : decodeURI($arguments.ai
 function operator(proxies, targetPlatform) {
   return proxies.map( proxy => {
     // change proxy information here
-    const resultArray = [airport];
+    const resultArray = [];
+    if (!proxy.name.toLowerCase().includes(airport.toLowerCase())) {
+        resultArray.push(airport)
+    }
     resultArray.push(proxy.name);
     proxy.name = resultArray.join(' ');
     return proxy;
